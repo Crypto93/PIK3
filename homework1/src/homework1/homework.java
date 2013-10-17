@@ -15,8 +15,12 @@ public class homework {
 		System.out.println("Enter C: ");
 		int c=input.nextInt();
 		
-		System.out.printf("%dx+%dy+%d=0", a, b, c);
 		
+		System.out.printf("%dx+%dy+%d=0", a, b, c);
+		System.out.println();
+		
+		loop:
+		{
 		for (int x=-1000; x<=1000; x++){
 			for (int y=-1000; y<=1000; y++){
 				int sum=0;
@@ -24,9 +28,10 @@ public class homework {
 				if (sum==0){
 					System.out.printf("x= %d  y= %d", x,y);
 					System.out.println();
+					break loop;
 				}
 			}
-		}
+		}}
 		
 		input.close();
 	}
