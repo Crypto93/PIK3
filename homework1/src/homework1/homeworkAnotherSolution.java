@@ -33,7 +33,7 @@ public class homeworkAnotherSolution {
 		for (int y=-1000; y<=1000; y++){
 			//check if current x / y combination is solution of the equation and cancel the method's execution
 			if (a*x+b*y+c==0){
-				System.out.println("The solution of the equation is:")
+				
 				System.out.printf("x= %d   y= %d", x,y);
 				System.out.println();
 				return;
