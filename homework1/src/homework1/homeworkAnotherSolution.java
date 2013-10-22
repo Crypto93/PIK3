@@ -22,7 +22,6 @@ public class homeworkAnotherSolution {
 		solutionFinder(-1000);
 		
 		input.close();
-
 	}
 	
 	public static void solutionFinder(int x){
