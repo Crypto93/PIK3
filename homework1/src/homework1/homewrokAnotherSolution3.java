@@ -8,7 +8,7 @@ public class homewrokAnotherSolution3 {
 	public static void main(String[] args) {
 
 		inputParameters();
-		
+
 		findSolution();
 
 	}
@@ -22,21 +22,46 @@ public class homewrokAnotherSolution3 {
 		b = input.nextFloat();
 		System.out.println("Enter C: ");
 		c = input.nextFloat();
-		
+
 		input.close();
 	}
 
-	public static void findSolution(){
-		double y=0;
-		loop:{
-		for (float x=-1000; x<=1000; x++){
-			y=((-(c+a*x)/b));
-			if (y%10==0){
-				System.out.println("x= " + x);
-				System.out.println("y= " + y);
-				break loop;
-			}
+	public static void findSolution() {
+		double y = 0;
+		if (b == 0) {
+			float xSpecial = 0;
+			xSpecial = (-c) / a;
+
+			System.out.println("When b=0, x=" + xSpecial);
+
+			/*if (xSpecial % 10 == 0) {
+				System.out.println("When b=0, x=" + xSpecial);
+			} else {
+				System.out.println("There are no integer solution of the equation");
+			}*/
 		}
+		if (a == 0) {
+			float ySpecial = 0;
+			ySpecial = (-c) / b;
+
+			System.out.println("When b=0, y=" + ySpecial);
+
+			/*if (ySpecial % 10 == 0) {
+				System.out.println("When b=0, y=" + ySpecial);
+			} else {
+				System.out.println("There are no integer solution of the equation");
+			}*/
+		} else {
+			loop: {
+				for (float x = -1000; x <= 1000; x++) {
+					y = ((-(c + a * x) / b));
+					if (y % 10 == 0) {
+						System.out.println("x= " + x);
+						System.out.println("y= " + y);
+						break loop;
+					}
+				}
+			}
 		}
 	}
 }
